@@ -48,9 +48,22 @@
   .log { border-top: 1px solid var(--line); margin-top: 8px; padding-top: 16px; }
   .log h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); margin: 0 0 14px; }
   .log ul { margin: 0; padding-left: 20px; font-size: 13.5px; color: var(--ink-soft); }
-  .log .rel { margin-bottom: 22px; }
-  .log .rel > h3 { font-size: 14px; margin: 0 0 8px; color: var(--ink); }
-  .log .rel > h3 span { font-weight: 400; font-size: 12px; color: var(--ink-soft); margin-left: 6px; }
+  /* 버전별 내역은 눌러서 펼치고 접음 — 최신 버전만 펼친 채로 시작 */
+  .log .rel { margin-bottom: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+  .log .rel > summary {
+    cursor: pointer; padding: 12px 16px; font-size: 14px; font-weight: 700; color: var(--ink);
+    list-style: none; display: flex; align-items: center; gap: 8px;
+  }
+  .log .rel > summary::-webkit-details-marker { display: none; }
+  .log .rel > summary::before { content: "▸"; color: var(--ink-soft); font-size: 11px; transition: transform .15s; }
+  .log .rel[open] > summary::before { transform: rotate(90deg); }
+  .log .rel > summary:hover { color: var(--accent); }
+  .log .rel > summary span { font-weight: 400; font-size: 12px; color: var(--ink-soft); }
+  .log .rel > summary .tag {
+    margin-left: auto; font-size: 11.5px; font-weight: 600; color: var(--accent);
+    background: var(--accent-soft); border-radius: 20px; padding: 2px 9px;
+  }
+  .log .rel > ul { padding: 2px 18px 16px 38px; }
   .log li { margin-bottom: 9px; line-height: 1.65; }
   .log li b { color: var(--ink); }
   .log .ex { display: block; margin-top: 3px; padding-left: 10px; border-left: 2px solid var(--line); font-size: 13px; }
@@ -96,8 +109,8 @@
   <div class="log">
     <h2>업데이트 내역</h2>
 
-    <div class="rel">
-      <h3>v0.10.1<span>2026-09-16</span></h3>
+    <details class="rel" open>
+      <summary>v0.10.1 <span>2026-09-16</span><span class="tag">최신</span></summary>
       <ul>
         <li><b>적립 포인트를 확인하지 못하던 판매처를 한 단계 더 들어가 확인합니다.</b>
           네이버 가격비교 묶음에만 있고 따로 상품으로 올라오지 않은 판매처는, 네이버가 적립 정보를 주지 않아
@@ -108,10 +121,10 @@
           경로별 가격이 <b>(다나와) 889,640</b> 처럼 한 줄에 나옵니다. 예전에는 판매처명과 금액이 따로 줄바꿈되면서
           칸이 세로로 길어져 보기 불편했습니다.</li>
       </ul>
-    </div>
+    </details>
 
-    <div class="rel">
-      <h3>v0.10.0<span>2026-09-16</span></h3>
+    <details class="rel">
+      <summary>v0.10.0 <span>2026-09-16</span></summary>
       <ul>
         <li><b>같은 상품이 두 곳에서 팔리는 것처럼 보이던 문제를 고쳤습니다.</b>
           네이버와 다나와를 둘 다 조회하다 보니, 실제로는 11번가 한 곳에 올라온 같은 상품이 양쪽에서 각각 잡혀
@@ -148,14 +161,14 @@
           · "전시장" 같은 문구 때문에 정상 상품이 걸러지던 문제 수정<br>
           · 조회에 걸린 시간을 "11분 22초"처럼 읽기 쉽게 표시</span></li>
       </ul>
-    </div>
+    </details>
 
-    <div class="rel">
-      <h3>v0.9.0</h3>
+    <details class="rel">
+      <summary>v0.9.0 <span>2026-09-12</span></summary>
       <ul>
         <li>첫 배포 — 네이버·다나와 동시 조회, 접속 제한 시 자동 재시도, 모델별 현황 보고서와 CSV 저장</li>
       </ul>
-    </div>
+    </details>
   </div>
 
   <footer>Pixion Inc. · 문의는 담당자에게</footer>
