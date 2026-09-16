@@ -69,10 +69,10 @@
 
   <div class="card">
     <div class="version-row">
-      <span class="v">현재 버전 <b>v0.10.0</b></span>
+      <span class="v">현재 버전 <b>v0.10.1</b></span>
       <span class="v">업데이트일 <b>2026-09-16</b></span>
     </div>
-    <a class="dl-btn" href="pricewatch-v0.10.0.zip" download>
+    <a class="dl-btn" href="pricewatch-v0.10.1.zip" download>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
       다운로드 (zip)
     </a>
@@ -95,6 +95,20 @@
 
   <div class="log">
     <h2>업데이트 내역</h2>
+
+    <div class="rel">
+      <h3>v0.10.1<span>2026-09-16</span></h3>
+      <ul>
+        <li><b>적립 포인트를 확인하지 못하던 판매처를 한 단계 더 들어가 확인합니다.</b>
+          네이버 가격비교 묶음에만 있고 따로 상품으로 올라오지 않은 판매처는, 네이버가 적립 정보를 주지 않아
+          포인트가 있어도 금액을 알 수 없었습니다. 이제 그런 판매처가 있는 모델은 가격비교 페이지를 한 번 더 열어
+          실제 가격과 판매처 링크를 가져옵니다. 해당되는 모델만 열기 때문에 조회 시간은 거의 늘지 않습니다.</li>
+
+        <li><b>보고서의 가격 표시를 한 줄로 정리했습니다.</b>
+          경로별 가격이 <b>(다나와) 889,640</b> 처럼 한 줄에 나옵니다. 예전에는 판매처명과 금액이 따로 줄바꿈되면서
+          칸이 세로로 길어져 보기 불편했습니다.</li>
+      </ul>
+    </div>
 
     <div class="rel">
       <h3>v0.10.0<span>2026-09-16</span></h3>
