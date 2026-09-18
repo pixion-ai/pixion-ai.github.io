@@ -250,6 +250,12 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4M12 17h.01M10.3 3.9L2.7 18a1.8 1.8 0 0 0 1.6 2.7h15.4a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0z"/></svg>
           <span><strong>행/열을 "숨기기"로 가리지 마세요.</strong> 숨겨도 조회 대상에서 빠지지 않습니다. 제외하고 싶은 모델은 기준가 칸을 비우거나 행 자체를 지워주세요.</span>
         </div>
+        <div class="note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+          <span><strong>모델명 칸 쓰는 법</strong> — "모델명"이라는 제목이 있는 칸 아래에 모델명을, <b>바로 오른쪽 칸에 기준가</b>를 적습니다.
+            모델명 앞에 브랜드를 붙여 <b>"비비텍BS570"</b> 또는 <b>"비비텍 BS570"</b>처럼 써도 되고, 그러면 그 행은 적힌 브랜드로 검색합니다.
+            한 시트에 여러 브랜드를 섞어 적어도 됩니다. 모델명은 영문과 숫자가 섞인 단어면 되고, "EB-X51"처럼 하이픈이 들어가도 됩니다.</span>
+        </div>
       </div>
     </div>
 
@@ -414,7 +420,7 @@
     <p class="lede">확장 아이콘 → 설정에서 바꿀 수 있는 항목들입니다. 대부분 기본값 그대로 쓰시면 됩니다.</p>
     <div class="settings-list">
       <div class="setting"><div class="name">구글 시트</div><div class="desc">가격표가 있는 구글 시트의 이름과 주소. 여러 개를 등록하면 실행할 때 전부 한 번에 조회해서 보고서 하나로 합치고, 보고서·CSV의 "시트" 칸에 어느 시트 모델인지 표시됩니다. 여러 시트에 같은 모델이 있으면 검색은 한 번만 합니다. 시트가 늘어 모델 수가 많아지면 네이버 접속 제한도 그만큼 자주 걸려 시간이 더 걸립니다. <span class="default">최소 1개 필수</span></div></div>
-      <div class="setting"><div class="name">브랜드 검색어</div><div class="desc">검색할 때 모델명 앞에 붙는 말. "비비텍 MX621"처럼 검색됩니다. <span class="default">기본값: 비비텍</span></div></div>
+      <div class="setting"><div class="name">브랜드 검색어</div><div class="desc">검색할 때 모델명 앞에 붙는 말. "비비텍 MX621"처럼 검색됩니다. 시트에 "비비텍BS570"처럼 브랜드를 붙여 적은 행은 이 설정 대신 적힌 브랜드를 씁니다. 비워두고 저장하면 브랜드 없이 모델명만으로 검색합니다(기본값으로 돌아가지 않습니다). <span class="default">기본값: 비비텍</span></div></div>
       <div class="setting"><div class="name">제외어</div><div class="desc">상품명에 이 단어가 있으면 결과에서 뺍니다. 엉뚱한 상품(중고, 렌탈 등)이 잡히면 여기에 단어를 추가하세요. <span class="default">기본값: 중고, 렌탈, 대여, 약정, 리스 등 20여 개</span></div></div>
       <div class="setting"><div class="name">부속품 판정 기준 (%)</div><div class="desc">제외어(중고·리퍼 제외)에 걸려도, 판매가가 기준가의 이 비율 이상이면 무시하고 정상 매칭으로 봅니다. "2만시간 램프" 같은 완제품 설명이 "램프" 제외어에 잘못 걸리는 걸 막기 위함 — 진짜 부속품 단독판매는 보통 기준가보다 훨씬 쌉니다. <span class="default">기본값: 50%</span></div></div>
       <div class="setting"><div class="name">네이버페이 기본 적립률 (%)</div><div class="desc">네이버가 기본으로 주는 적립률입니다. 판매처의 최대 적립 포인트에서 이만큼을 뺀 나머지를 "판매처가 자기 돈으로 더 얹어준 포인트"로 보고, 그 금액을 뺀 실질가가 기준가보다 낮으면 <b>포인트 반영 시 기준가 미만</b>으로 표시합니다. 네이버 정책이 바뀌면 여기서 고치세요. <span class="default">기본값: 1%</span></div></div>

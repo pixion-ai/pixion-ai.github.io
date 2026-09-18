@@ -82,10 +82,10 @@
 
   <div class="card">
     <div class="version-row">
-      <span class="v">현재 버전 <b>v0.10.1</b></span>
-      <span class="v">업데이트일 <b>2026-09-16</b></span>
+      <span class="v">현재 버전 <b>v0.10.2</b></span>
+      <span class="v">업데이트일 <b>2026-09-18</b></span>
     </div>
-    <a class="dl-btn" href="pricewatch-v0.10.1.zip" download>
+    <a class="dl-btn" href="pricewatch-v0.10.2.zip" download>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
       다운로드 (zip)
     </a>
@@ -110,7 +110,21 @@
     <h2>업데이트 내역</h2>
 
     <details class="rel" open>
-      <summary>v0.10.1 <span>2026-09-16</span><span class="tag">최신</span></summary>
+      <summary>v0.10.2 <span>2026-09-18</span><span class="tag">최신</span></summary>
+      <ul>
+        <li><b>모델명 앞에 브랜드를 붙여 써도 인식합니다.</b>
+          시트의 모델명 칸에 "비비텍BS570" 또는 "비비텍 BS570"처럼 브랜드를 붙여 적은 행은, 예전에는 모델명으로 인식되지 않아
+          조회에서 통째로 빠졌습니다. 이제 앞의 브랜드를 떼어 그 행의 검색 브랜드로 씁니다. 한 시트에 여러 브랜드를 섞어 적어도
+          행마다 맞는 브랜드로 검색합니다.</li>
+
+        <li><b>다른 브랜드의 모델명도 인식합니다.</b>
+          예전에는 "MX621"처럼 정해진 모양의 모델명만 받아서, "EB-X51"처럼 하이픈이 들어간 모델명은 건너뛰었습니다.
+          이제 영문과 숫자가 섞인 모델명이면 인식합니다.</li>
+      </ul>
+    </details>
+
+    <details class="rel">
+      <summary>v0.10.1 <span>2026-09-16</span></summary>
       <ul>
         <li><b>적립 포인트를 확인하지 못하던 판매처를 한 단계 더 들어가 확인합니다.</b>
           네이버 가격비교 묶음에만 있고 따로 상품으로 올라오지 않은 판매처는, 네이버가 적립 정보를 주지 않아
