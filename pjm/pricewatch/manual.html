@@ -71,8 +71,6 @@
   }
   h1.title { font-size: clamp(30px, 6vw, 42px); font-weight: 900; margin: 0 0 10px; letter-spacing: -0.01em; }
   .subtitle { color: var(--ink-soft); font-size: 17px; max-width: 58ch; margin: 0; }
-  .meta-row { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: var(--ink-faint); }
-  .meta-row span { white-space: nowrap; }
 
   /* ---- flow strip ---- */
   .flow {
@@ -182,15 +180,9 @@
 <main>
 
   <header class="masthead">
-    <span class="eyebrow">사용 설명서 · v1</span>
+    <span class="eyebrow">사용 설명서 · <!--VERSION-->v1.0.0<!--/VERSION--></span>
     <h1 class="title">최저가 감시 사용 설명서</h1>
     <p class="subtitle">구글 시트의 기준가를 읽어 네이버 쇼핑·다나와에서 더 싸게 파는 곳이 있는지 자동으로 찾아주는 크롬 확장 프로그램입니다. 버튼 하나로 실행하고, 결과는 보고서와 CSV로 받습니다.</p>
-    <div class="meta-row">
-      <span>설명서 버전 <b><!--VERSION-->v1.0.0<!--/VERSION--></b> · <!--DATE-->2026-09-22<!--/DATE--> (앱 버전과 같습니다)</span>
-      <span>대상: 비개발자 / 가격 관리 담당자</span>
-      <span>실행 방식: 크롬 확장 아이콘 클릭</span>
-      <span>소요 시간: 모델 수에 따라 다름 (48개 기준 수 분~수십 분)</span>
-    </div>
   </header>
 
   <div class="flow" aria-hidden="false">
