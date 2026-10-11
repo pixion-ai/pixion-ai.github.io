@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    var browserKo = /^ko\b/i.test(navigator.language || '');
+    if (saved === 'ko' || (!saved && browserKo)) location.replace('ko/' + location.hash);
+  })();
+</script>
 <title>Pixion — Invisible Tech, Visible Impact</title>
+<link rel="alternate" hreflang="en" href="https://www.pixion.ai/">
+<link rel="alternate" hreflang="ko" href="https://www.pixion.ai/ko/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -42,6 +52,12 @@
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
   .nav-links a:hover { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 1.25rem; }
+  .lang-switch { display: flex; gap: 0.5rem; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; }
+  .lang-switch a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .lang-switch a:hover { color: var(--text); }
+  .lang-switch .active { color: var(--text); }
+  .lang-switch .sep { color: var(--border); }
   .contact-btn {
     font-size: 13px; padding: 0.45rem 1.1rem;
     border: 0.5px solid var(--border); border-radius: 6px;
@@ -87,6 +103,14 @@
     padding: 0.75rem 1rem; border-radius: 7px; transition: color 0.2s;
   }
   .cta-secondary:hover { color: var(--text); }
+  .copy-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: inherit; font-size: 14px; color: var(--muted);
+    background: none; border: 0.5px solid var(--border); border-radius: 7px;
+    padding: 0.75rem 1.1rem; cursor: pointer; transition: color 0.2s, border-color 0.2s;
+  }
+  .copy-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+  .copy-btn.copied { color: var(--accent2); border-color: var(--accent2); }
 
   .video-section { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem 5rem; }
   .video-wrapper {
@@ -132,7 +156,7 @@
   .feature-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent2); letter-spacing: 0.08em; margin-bottom: 0.75rem; }
   .feature h3 { font-size: 15px; font-weight: 500; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
   .feature p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-  .feature-stat { font-size: 28px; font-weight: 300; color: var(--accent); letter-spacing: -0.03em; margin-bottom: 0.25rem; }
+  .feature-stat { font-size: 28px; font-weight: 300; color: var(--accent2); letter-spacing: -0.03em; margin-bottom: 0.25rem; }
 
   .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; }
   .step { display: flex; flex-direction: column; gap: 0.75rem; }
@@ -142,7 +166,7 @@
 
   .usecases { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 0.5px solid var(--border); border-radius: 12px; overflow: hidden; }
   .usecase { background: var(--bg2); padding: 1.5rem 2rem; display: flex; align-items: flex-start; gap: 1.5rem; }
-  .usecase-tag { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); white-space: nowrap; padding-top: 3px; min-width: 80px; }
+  .usecase-tag { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent2); white-space: nowrap; padding-top: 3px; min-width: 80px; }
   .usecase-content h3 { font-size: 15px; font-weight: 500; margin-bottom: 0.25rem; }
   .usecase-content p { font-size: 14px; color: var(--muted); }
 
@@ -184,7 +208,10 @@
     <li><a href="#how">How it works</a></li>
     <li><a href="#usecases">Use cases</a></li>
   </ul>
-  <a class="contact-btn" href="mailto:representative@pixion.ai">Contact us</a>
+  <div class="nav-right">
+    <div class="lang-switch"><span class="active">EN</span><span class="sep">/</span><a href="ko/" hreflang="ko" lang="ko">KO</a></div>
+    <a class="contact-btn" href="#contact">Contact us</a>
+  </div>
 </nav>
 
 <div class="hero">
@@ -195,7 +222,7 @@
     Pixion transforms existing lighting and shelf infrastructure into a dynamic signage platform — projecting contextual, location-aware content directly along customer pathways, without screens or additional hardware.
   </p>
   <div class="cta-row">
-    <a class="cta-primary" href="mailto:representative@pixion.ai">Get in touch →</a>
+    <a class="cta-primary" href="#contact">Get in touch →</a>
     <a class="cta-secondary" href="#platform">See how it works ↓</a>
   </div>
 </div>
@@ -242,12 +269,12 @@
     <div class="feature">
       <div class="feature-num">AI Option</div>
       <h3>On-device Vision AI</h3>
-      <p>Detects pedestrians and dynamically shifts projected content ahead of their path. Automatically counts foot traffic driven by each campaign — with no video storage and full privacy compliance.</p>
+      <p>Detects pedestrian movement paths and projects the most relevant content — with no video storage and full privacy compliance.</p>
     </div>
     <div class="feature">
       <div class="feature-num">Platform</div>
       <h3>One platform, multi-market</h3>
-      <p>The same hardware and software stack adapts across retail, events, hospitality, and public infrastructure — just change the content. Open platform integrates with existing CCTV and analytics systems.</p>
+      <p>With the same hardware and software, simply change the content to deploy across retail, events, hospitality, and public infrastructure. Open platform integrates with existing CCTV and analytics systems.</p>
     </div>
   </div>
 </section>
@@ -269,7 +296,7 @@
     <div class="step">
       <span class="step-num">01</span>
       <h3>Install into existing fixtures</h3>
-      <p>Pixion units mount into rail lighting, downlights, and shelf rails. No rewiring. No construction. Setup takes hours, not days.</p>
+      <p>Pixion units mount into rail lighting, downlights, and shelf rails. No rewiring. No construction. Setup takes minutes, not hours.</p>
     </div>
     <div class="step">
       <span class="step-num">02</span>
@@ -293,8 +320,8 @@
 
 <section id="usecases">
   <p class="section-label">Use cases</p>
-  <h2>Replacing analog signage<br>across every space</h2>
-  <p class="body-text">
+  <h2>Replacing analog signage</h2>
+  <p class="body-text" style="max-width: none;">
     Any environment where printed signage currently guides or informs people in motion is a natural fit for Pixion.
   </p>
   <div class="usecases">
@@ -329,7 +356,7 @@
   </div>
 </section>
 
-<div class="contact-section">
+<div class="contact-section" id="contact">
   <div class="contact-inner">
     <div>
       <p class="section-label">Contact</p>
@@ -337,13 +364,15 @@
       <p class="body-text" style="margin-bottom: 1.5rem;">
         We are actively working with early channel partners and enterprise pilots. Reach out to discuss collaboration opportunities.
       </p>
-      <a class="cta-primary" href="mailto:representative@pixion.ai">representative@pixion.ai →</a>
+      <div class="cta-row">
+        <a class="cta-primary" href="mailto:representative@pixion.ai">representative@pixion.ai →</a>
+        <button class="copy-btn" type="button" data-email="representative@pixion.ai" data-copied="Copied!">Copy email</button>
+      </div>
     </div>
     <dl class="info-table">
       <div class="info-row"><dt>Company</dt><dd>Pixion Inc.</dd></div>
       <div class="info-row"><dt>Location</dt><dd>Seoul, South Korea</dd></div>
       <div class="info-row"><dt>Email</dt><dd><a href="mailto:representative@pixion.ai" style="color:var(--accent);text-decoration:none;">representative@pixion.ai</a></dd></div>
-      <div class="info-row"><dt>Web</dt><dd>pixion.ai</dd></div>
     </dl>
   </div>
 </div>
@@ -352,6 +381,38 @@
   <span>© 2025 Pixion Inc.</span>
   <span>pixion.ai</span>
 </footer>
+
+<script>
+  document.querySelectorAll('.lang-switch a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('lang', a.getAttribute('hreflang')); } catch (e) {}
+    });
+  });
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var label = btn.textContent;
+      function done() {
+        btn.textContent = btn.dataset.copied;
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = label; btn.classList.remove('copied'); }, 2000);
+      }
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = btn.dataset.email;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        done();
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(btn.dataset.email).then(done, fallback);
+      } else {
+        fallback();
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
