@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=794">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<title>PIXION 조명형 사이니지 제품소개서</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap">
+<style>
+:root{
+  --blue:#F0356A; --blue-deep:#C92455; --navy:#3E2B55; --ink:#1A1A1A; --muted:#555B66; --faint:#8A8F99;
+  --line:#DCDEE3; --panel:#EFEFEF; --panel-2:#F7F7F7; --paper:#FFFFFF; --sky:#FBE3EA; --yellow:#F4C430; --charcoal:#1F1F1F; --orange:#F5B84A;
+}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:"Pretendard","Malgun Gothic",sans-serif;font-size:10.2pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;display:flex;flex-direction:column}
+.page:last-child{page-break-after:auto}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font-size:8.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.ybar{width:16mm;height:1.6mm;background:var(--yellow);margin:2mm 0 5mm}
+.pre{font-size:14pt;color:#333}
+.slogan{font-family:"Poppins","Pretendard",sans-serif;font-weight:500;font-size:11pt;color:#333;margin-top:4mm}
+
+/* ---------- page 1 ---------- */
+.p1-top{padding:12mm 14mm 0;display:flex;justify-content:space-between;align-items:center}
+.p1-top img{height:9mm}
+.p1-top .tag{font-size:8.5pt;color:var(--muted);letter-spacing:.06em}
+.hero{margin:16mm 14mm 0;display:grid;grid-template-columns:1fr 96mm;gap:7mm;align-items:center}
+.hero h1{font-size:24pt;line-height:1.25;font-weight:700;letter-spacing:-.01em;margin-top:1mm}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero .lead{margin-top:5mm;font-size:11pt;color:var(--muted);line-height:1.6;max-width:92mm}
+.photo{background:var(--panel);border-radius:5mm;display:flex;align-items:center;justify-content:center;padding:0;position:relative;overflow:hidden;aspect-ratio:1145/657;min-height:0}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .cap{position:absolute;left:4mm;bottom:3mm;font-size:7.5pt;color:#fff;background:rgba(0,0,0,.45);padding:.5mm 2mm;border-radius:1.5mm}
+.benefits{margin:0 14mm 0;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+.benefit{border-top:0;padding-top:0}
+.benefit::before{content:"";display:block;width:11mm;height:1.2mm;background:var(--yellow);margin-bottom:3mm}
+.benefit b{display:block;font-size:11pt;margin-bottom:1.5mm;white-space:nowrap}
+.benefit p{color:var(--muted);font-size:9.5pt}
+.steps{margin:9mm 14mm 0;background:var(--navy);color:#fff;border-radius:4mm;padding:6mm 7mm 6.5mm;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;position:relative}
+.steps .eyebrow{color:var(--yellow);grid-column:1/-1;margin-bottom:-2mm}
+.steps .eyebrow .num{color:#fff}
+.step{display:flex;gap:3mm;align-items:flex-start}
+.step .n{flex:none;width:5.5mm;height:5.5mm;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:8pt;margin-top:.8mm}
+.step b{display:block;font-size:11pt;margin-bottom:1mm}
+.step p{font-size:9pt;color:#D9D2E3;line-height:1.5}
+.uses{margin:0}
+.uses .eyebrow{margin-bottom:4mm}
+.use-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}
+.use{background:var(--panel-2);border:1px solid var(--line);border-radius:3mm;padding:5.5mm 5mm 6mm}
+.use b{display:block;font-size:10.5pt;margin-bottom:1mm}
+.use p{font-size:8.8pt;color:var(--muted);line-height:1.45}
+.foot{margin-top:auto;padding:0 14mm 10mm;display:flex;justify-content:space-between;align-items:flex-end;font-size:8.5pt;color:var(--faint)}
+.foot b{color:var(--muted);font-weight:500}
+
+/* ---------- page 2 ---------- */
+.p2-top{padding:12mm 14mm 0;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);margin:0 0 0;padding-bottom:4mm}
+.p2-top h2{font-size:17pt}
+.p2-top .tag{font-size:8.5pt;color:var(--muted)}
+.section{margin:7mm 14mm 0}
+.section h3{font-size:12.5pt;margin-bottom:5mm;display:flex;align-items:center;gap:3mm}
+.section h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.section h3::before,.sq{content:"";display:inline-block;flex:none;width:3.2mm;height:3.2mm;background:var(--blue)}
+.detail .hd{align-items:center}
+.steps .eyebrow{display:flex;align-items:center;gap:3mm}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm 6mm}
+.feat{display:grid;grid-template-columns:9mm 1fr;gap:2.5mm;align-items:start}
+.feat .ic{width:9mm;height:9mm;border-radius:2.5mm;background:var(--charcoal);display:flex;align-items:center;justify-content:center}
+.feat .ic svg{width:5.5mm;height:5.5mm;stroke:var(--orange);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.feat b{display:block;font-size:10.5pt;margin-bottom:.8mm}
+.feat p{font-size:9pt;color:var(--muted);line-height:1.45}
+.install{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm}
+.inst{border:1px solid var(--line);border-radius:4mm;padding:4.5mm 5mm;display:grid;grid-template-columns:38mm 1fr;gap:5mm;align-items:center;background:var(--panel-2)}
+.inst img{max-width:100%;max-height:38mm;justify-self:center;filter:drop-shadow(0 4px 8px rgba(14,18,48,.18))}
+.inst b{display:block;font-size:11pt;margin-bottom:1.5mm}
+.inst p{font-size:9pt;color:var(--muted);line-height:1.45}
+.inst .chip{display:inline-block;margin-top:2mm;font-size:8pt;font-weight:700;color:#fff;background:var(--navy);padding:.6mm 2.2mm;border-radius:2mm}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8mm}
+table.spec{width:100%;border-collapse:collapse;font-size:9.2pt}
+table.spec th,table.spec td{text-align:left;padding:1.7mm 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.spec th{width:30mm;color:var(--muted);font-weight:500}
+.road{list-style:none;margin:0;padding:0;display:grid;gap:2.6mm}
+.road li{display:grid;grid-template-columns:5mm 1fr;gap:2.5mm;font-size:9.2pt;align-items:start}
+.road li::before{content:"";width:4mm;height:1.2mm;background:var(--yellow);margin-top:2.3mm}
+.road li b{font-weight:700}
+.road li span{color:var(--muted)}
+.note{font-size:8.2pt;color:var(--faint);margin-top:2.5mm}
+.contact{margin:auto 14mm 9mm;background:var(--navy);color:#fff;border-radius:4mm;padding:4.5mm 8mm;display:flex;justify-content:space-between;align-items:center}
+.contact img{height:7mm}
+.contact .c{text-align:right;font-size:9.5pt;line-height:1.55}
+.contact .c b{font-size:11pt;display:block;margin-bottom:.5mm}
+.contact .c span{color:#D9D2E3}
+
+.why{margin:13mm 14mm 0}
+.why .eyebrow{margin-bottom:3.5mm}
+.detail{margin:9mm 14mm 0}
+.detail .hd{display:flex;align-items:baseline;gap:3mm;margin-bottom:3mm}
+.num{font-family:"Poppins","Pretendard",sans-serif;font-weight:700;font-size:9pt;letter-spacing:.1em;color:var(--blue)}
+.detail h3{font-size:12.5pt}
+.detail .sub{font-size:9.5pt;color:var(--muted);margin-left:2mm}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.trio .it{background:var(--panel-2);border:1px solid var(--line);border-radius:3mm;padding:3.8mm 4.5mm 4.2mm}
+.trio .it b{display:block;font-size:10.5pt;margin-bottom:1mm}
+.trio .it p{font-size:8.8pt;color:var(--muted);line-height:1.45}
+.section .eyebrow{margin-bottom:1.5mm}
+.section{margin:4mm 14mm 0}
+.use p{font-size:8.6pt;line-height:1.4}
+.inst p{line-height:1.4}
+.feat p{font-size:8.8pt}
+.note{margin-top:1.5mm}
+.section h3{margin-bottom:3mm}
+.section h3{margin-bottom:3.5mm}
+.inst img{max-height:20mm}
+.inst{grid-template-columns:1fr;gap:2.5mm;align-items:start}
+.inst .pic{height:20mm;display:flex;align-items:center;justify-content:center}
+.inst .pic.soon{border:1px dashed var(--line);border-radius:3mm;color:var(--faint);font-size:8.5pt}
+table.spec th{width:19mm;padding-right:2mm}
+table.spec{font-size:9pt}
+.feat p{line-height:1.4}
+.feat-grid{gap:3.5mm 6mm}
+.p2-top{padding-top:9mm;padding-bottom:3mm}
+.inst{padding:3mm 4.5mm 3.5mm}
+table.spec th,table.spec td{padding:1mm 0}
+.road{gap:2mm}
+.use{padding:4mm 4.5mm 4mm}
+.benefit p{font-size:9.2pt}
+.hero .lead{margin-top:4mm}
+
+.trio.dark .it{background:var(--navy);border-color:var(--navy);color:#fff}
+.trio.dark .it p{color:#D9D2E3}
+.trio.dark .n{display:inline-flex;align-items:center;justify-content:center;width:4.2mm;height:4.2mm;border-radius:50%;background:var(--blue);color:#fff;font-size:7pt;font-weight:700;margin-right:2mm;vertical-align:middle;position:relative;top:-.3mm}
+.section h3::after{display:none}
+.section:first-of-type{margin-top:14mm}
+.section{margin:7mm 14mm 0}
+.why{margin:16mm 14mm 0}
+.detail{margin:11mm 14mm 0}
+.inst .pic{height:22mm}
+.feat-grid{gap:4.5mm 6mm}
+.use p,.feat p{line-height:1.45}
+.h3note{margin-left:auto;font-size:8.2pt;color:var(--faint);font-weight:400}
+.feat{align-items:center}
+.inst .lbl{display:inline-block;font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:.7mm 2.6mm;border-radius:2mm;margin-bottom:1.8mm}
+.inst .soon-txt{font-size:8.2pt;color:var(--faint);margin-left:2mm}
+
+.hero-logo{height:7.5mm;display:block;margin-bottom:7mm}
+.timeline{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;padding-top:1mm}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:4.2mm;height:1px;background:var(--line)}
+.tl{position:relative;padding-top:10mm}
+.tl .n{position:absolute;top:1mm;left:0;width:6.5mm;height:6.5mm;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:8.5pt;display:flex;align-items:center;justify-content:center;font-family:"Poppins","Pretendard",sans-serif}
+.tl b{display:block;font-size:10.5pt;margin-bottom:1mm}
+.tl p{font-size:8.8pt;color:var(--muted);line-height:1.45}
+.navybox{background:var(--navy);color:#fff;border-radius:4mm;padding:5.5mm 6mm;display:grid;grid-template-columns:repeat(3,1fr)}
+.navybox .col{padding:0 5mm;border-left:1px solid rgba(255,255,255,.18)}
+.navybox .col:first-child{padding-left:0;border-left:0}
+.navybox .col:last-child{padding-right:0}
+.navybox b{display:block;font-size:10.5pt;color:var(--yellow);margin-bottom:1mm}
+.navybox p{font-size:8.8pt;color:#D9D2E3;line-height:1.45}
+.feat-list{display:grid;grid-template-columns:1fr 1fr;column-gap:10mm}
+.feat{grid-template-columns:8mm 1fr;gap:3.5mm;padding:2.6mm 0;border-bottom:1px solid var(--line)}
+.feat .ic{width:8mm;height:8mm;border-radius:50%}
+.feat .ic svg{width:4.6mm;height:4.6mm}
+.feat b{font-size:10pt;margin-bottom:.4mm}
+.feat p{font-size:8.8pt;line-height:1.4}
+.two{align-items:stretch}
+.two>div{display:flex;flex-direction:column}
+table.spec{flex:1}
+.road{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+
+.why + .detail{margin-top:17mm}
+
+.hero-logo{height:11mm;margin-bottom:8mm}
+.hero h1{font-size:18pt;white-space:nowrap;letter-spacing:-.02em}
+
+.hero .lead{font-size:9pt;margin-top:3.5mm}
+
+.demo{display:grid;grid-template-columns:1fr 22mm;gap:4mm;text-decoration:none;color:inherit;align-items:center}
+.thumb{position:relative;border-radius:3mm;overflow:hidden;aspect-ratio:16/9;background:#000}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.play{position:absolute;right:2.5mm;bottom:2.5mm;width:8mm;height:8mm;border-radius:50%;background:rgba(240,53,106,.92)}
+.play::after{content:"";position:absolute;left:3.1mm;top:2.2mm;border-left:3mm solid #fff;border-top:1.8mm solid transparent;border-bottom:1.8mm solid transparent}
+.qrbox{display:flex;flex-direction:column;align-items:center;gap:1.5mm}
+.qrbox img{width:22mm;height:22mm;image-rendering:pixelated}
+.qrbox span{font-size:6.2pt;color:var(--muted);white-space:nowrap;letter-spacing:.01em}
+.demo-cap{font-size:8.2pt;color:var(--faint);margin-top:2.5mm}
+.roadline{display:flex;align-items:center;flex-wrap:wrap;gap:0 2.5mm;font-size:8.8pt;color:var(--muted);margin-top:7mm}
+.roadline::before{content:"";width:4mm;height:1.2mm;background:var(--yellow);margin-right:.5mm}
+.roadline .lbl2{font-weight:700;color:var(--ink);margin-right:1.5mm}
+.roadline i{font-style:normal;color:var(--faint)}
+
+.hero h1{font-size:18pt}
+.hero .lead{max-width:none}
+.trio .it .fn{font-size:7.6pt;color:var(--faint);margin-top:1.5mm}
+
+.hero{align-items:stretch}
+.photo{aspect-ratio:auto;height:auto;align-self:stretch}
+.photo img{object-position:50% 55%}
+.hero-logo{margin-top:.5mm}
+
+.h3note{margin-left:2mm}
+
+.section h3{align-items:baseline}
+.section h3::before{align-self:center}
+@media screen{body{background:#e9e9ec;padding:12px 0}.page{margin:0 auto;box-shadow:0 2px 14px rgba(0,0,0,.14)}.page+.page{margin-top:12px}}
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 ============ -->
+<section class="page">
+  <div class="hero">
+    <div>
+      <img class="hero-logo" src="img/logo_black.png" alt="PIXION">
+      <div class="pre">공간을 미디어로 바꾸는,</div>
+      <h1>AIoT 조명형 사이니지</h1>
+      <p class="lead">기존 조명 인프라를 활용해 인테리어를 해치지 않고<br>바닥과 벽을 광고·홍보 매체로 바꿉니다.</p>
+    </div>
+    <div class="photo">
+      <img src="img/hero_effect2.jpg" alt="매장 바닥에 투사된 콘텐츠">
+    </div>
+  </div>
+
+  <div class="why">
+    <div class="benefits">
+      <div class="benefit"><b>압도적 주목도와 시인성</b><p>고객의 시선이 머무는 바닥과 벽에, 1,000 lux 이상의 밝은 빛으로, 움직이는 그래픽을 비춥니다.</p></div>
+      <div class="benefit"><b>공사 없는 설치, 앱으로 운영</b><p>조명 레일에 꽂으면 설치가 끝납니다. 콘텐츠는 본사가 앱에서 전국 매장을 한 번에 바꿉니다.</p></div>
+      <div class="benefit"><b>한 번 설치하면 계속 새롭게</b><p>인쇄물을 다시 만들지 않습니다. 콘텐츠만 바꿔 쓰고, 매장을 옮겨도 다시 씁니다.</p></div>
+    </div>
+  </div>
+
+  <div class="detail">
+    <div class="hd"><span class="sq"></span><h3>눈높이가 아니라 발 밑에서</h3><span class="sub">세 가지가 겹쳐 지나가던 걸음을 멈추게 합니다.</span></div>
+    <div class="trio">
+      <div class="it"><b>피할 수 없는 시선</b><p>동선 위의 빛은 피할 수 없습니다. 입구·계산대·대기 줄, 사람이 서 있는 자리가 그대로 광고 면이 됩니다.</p></div>
+      <div class="it"><b>1,000 lux의 또렷한 시인성</b><p>직사광선이 없는 대부분의 실내 매장에서 또렷하게 식별할 수 있습니다.</p><p class="fn">※ 투사 거리 2.5m 기준</p></div>
+      <div class="it"><b>모션 그래픽</b><p>정지된 인쇄물과 달리 모션은 시선을 붙잡습니다. 시선을 끈 뒤 원하는 방향으로 고객을 이끕니다.</p></div>
+    </div>
+  </div>
+
+  <div class="detail">
+    <div class="hd"><span class="sq"></span><h3>설치부터 운영까지 세 단계</h3></div>
+    <div class="timeline">
+      <div class="tl"><div class="n">1</div><b>설치</b><p>조명 레일에 끼우거나 브래킷으로 고정하고 전원을 연결합니다.</p></div>
+      <div class="tl"><div class="n">2</div><b>앱에서 등록</b><p>스마트폰 앱이 기기를 찾아 매장 Wi-Fi에 연결합니다. 설치 업체에 위임할 수도 있습니다.</p></div>
+      <div class="tl"><div class="n">3</div><b>콘텐츠 업로드</b><p>영상과 이미지를 원하는 시간에 노출되도록 설정하고, 기기에 배포할 수 있습니다.</p></div>
+    </div>
+  </div>
+
+  <div class="detail">
+    <div class="hd"><span class="sq"></span><h3>인쇄하지 않고 바꿉니다</h3><span class="sub">영상이 나오는 장치가 아니라, 매장 운영의 번거로움을 줄이는 시스템입니다.</span></div>
+    <div class="navybox">
+      <div class="col"><b>교체 비용·폐기물 제로</b><p>포스터·현수막·POP를 바꿀 때 드는 인쇄비와 배송, 교체 인력이 사라지고, 행사가 끝나도 버릴 것이 없습니다.</p></div>
+      <div class="col"><b>전국 매장, 한 곳에서</b><p>매장별 인쇄물 제작·배송 업무가 줄고, 행사·시즌 변경 시 콘텐츠를 일괄 교체합니다. 매장 방문 없이 중앙에서 통합 관리합니다.</p></div>
+      <div class="col"><b>공간이 바뀌어도 다시</b><p>시즌·행사마다 콘텐츠를 갈아 끼우고, 매장을 옮기거나 레이아웃이 바뀌면 기기를 떼어 그대로 다시 씁니다.</p></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div><b>주식회사 픽시온</b> · www.pixion.ai · representative@pixion.ai</div>
+    <div>1 / 2</div>
+  </div>
+</section>
+
+<!-- ============ PAGE 2 ============ -->
+<section class="page">
+  <div class="section">
+    <h3>공간별 활용</h3>
+    <div class="uses">
+    <div class="use-grid">
+      <div class="use"><b>리테일 매장</b><p>매장 진입 등 동선을 유도하고 POP를 대체</p></div>
+      <div class="use"><b>전시장·회의장</b><p>행사를 위해 단기간 사용 후 폐기되는 모든 인쇄물이 대체 대상</p></div>
+      <div class="use"><b>문화·호스피탈리티</b><p>박물관·미술관, 호텔·리조트, 팝업스토어의 공간 연출과 브랜딩</p></div>
+      <div class="use"><b>공공·교통 시설</b><p>관공서, 지하철역, 공항 등의 동선 유도나 비상 시 동적 피난 유도</p></div>
+    </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>주요 기능</h3>
+    <div class="feat-list">
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><div><b>원격 관리</b><p>전국 매장 기기를 한 화면에서 관리하고 함께 운영합니다.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="8" r="4"/></svg></div><div><b>재실 감지</b><p>보행자가 있을 때만 화면을 켜서 에너지를 절감합니다.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>콘텐츠 스케줄</b><p>원하는 시간에 맞춰 콘텐츠가 자동으로 바뀝니다.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><b>운영 리포트</b><p>가동 현황과 이상 여부를 매일 이메일 리포트로 받습니다.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.9-9.9A6 6 0 0 1 17.6 9 4 4 0 0 1 17 18H7z"/><path d="M9 14l2 2 4-4"/></svg></div><div><b>끊김 없는 재생</b><p>인터넷이 잠시 끊겨도 저장된 콘텐츠로 재생이 이어집니다.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5"/><path d="M18 3v4h-4"/><path d="M20 12a8 8 0 0 1-14 5"/><path d="M6 21v-4h4"/></svg></div><div><b>자동 업데이트</b><p>기능 개선이 원격으로 배포되어 현장 방문이 필요 없습니다.</p></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>설치 방식</h3>
+    <div class="install">
+      <div class="inst"><div class="pic"><img src="img/rail_b.png" alt="레일형"></div><div><span class="lbl">레일형</span><p>매장에 흔한 조명 레일(트랙)에 그대로 끼웁니다. 전원도 레일에서 받아 별도 배선이 없습니다.</p></div></div>
+      <div class="inst"><div class="pic"><img src="img/single_front.png" alt="개별 설치형"></div><div><span class="lbl">개별 설치형</span><p>레일이 없는 곳은 브래킷이나 삼각대 규격(1/4") 마운트로 천장·벽에 답니다. 어댑터로 전원을 연결합니다.</p></div></div>
+      <div class="inst"><div class="pic soon">이미지 준비 중</div><div><span class="lbl">선반형</span><span class="soon-txt">2027년 말 출시 예정</span><p>진열 선반 아래에 아주 작게 달아 선반 앞 바닥에 비춥니다. 구매 시점의 고객에게 직접 보여 줍니다.</p></div></div>
+    </div>
+  </div>
+
+  <div class="section two">
+    <div>
+      <h3>주요 사양<span class="h3note">※ 사양은 양산 과정에서 달라질 수 있습니다.</span></h3>
+      <table class="spec">
+        <tr><th>설치 환경</th><td>실내 최대 3m 이내의 투사 거리 권장 (최적 2.5m)</td></tr>
+        <tr><th>레일 규격</th><td>국내 표준 220V 1회로 조명 레일 호환</td></tr>
+        <tr><th>전원</th><td>레일 전원 또는 DC 24V 어댑터</td></tr>
+        <tr><th>콘텐츠</th><td>영상·이미지 파일, 서버에서 자동 변환</td></tr>
+        <tr><th>연결</th><td>Wi-Fi, 블루투스(초기 설정)</td></tr>
+        <tr><th>운영</th><td>픽시온 사이니지 전용앱에서 다수 기기 운영</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>실제 시연 영상</h3>
+      <a class="demo" href="https://youtu.be/kEMaPmPLJ3I">
+        <div class="thumb"><img src="img/demo_thumb.jpg" alt="프로토타입 시연 영상"><div class="play"></div></div>
+        <div class="qrbox"><img src="img/demo_qr.png" alt="QR"></div>
+      </a>
+      <p class="demo-cap">벽면 투사 프로토타입 시연 · QR을 찍거나 이미지를 클릭</p>
+    </div>
+  </div>
+
+  <div class="section roadline">
+    <span class="lbl2">확장 예정</span>
+    <span>WYSIWYG 제작 툴</span><i>·</i><span>대규모 서비스 API</span><i>·</i><span>AI 커스터마이징</span><i>·</i><span>복수 기기 연동 시나리오</span><i>·</i><span>개방형 플랫폼</span><i>·</i><span>데이터 리포트</span>
+  </div>
+
+  <div class="contact">
+    <img src="img/logo_white.png" alt="PIXION">
+    <div class="c"><b>주식회사 픽시온</b><span>서울 강서구 마곡중앙로 111, B204-202호<br>www.pixion.ai · representative@pixion.ai</span></div>
+  </div>
+</section>
+
+</body>
+</html>
