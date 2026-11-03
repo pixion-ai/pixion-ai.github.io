@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIXION Product Brochure</title>
+<meta name="description" content="PIXION AIoT lighting signage product brochure — view online or download the PDF.">
+<link rel="alternate" hreflang="ko" href="https://www.pixion.ai/brochure/">
+<link rel="alternate" hreflang="en" href="https://www.pixion.ai/brochure/en/">
+<script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    if (saved === 'ko') location.replace('../' + location.hash);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #08090a;
+    --bg2: #111215;
+    --border: rgba(255,255,255,0.08);
+    --text: #f0f0ee;
+    --muted: #888884;
+    --accent: #c8f5c0;
+    --accent2: #4fd9a0;
+  }
+  body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: keep-all;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo img { height: 26px; display: block; margin-bottom: 2.5rem; }
+  .eyebrow {
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    color: var(--accent2); letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    font-weight: 300; line-height: 1.2;
+    letter-spacing: -0.02em; margin-bottom: 1rem;
+  }
+  h1 em { font-style: normal; color: var(--accent); }
+  .desc { color: var(--muted); font-size: 15px; margin-bottom: 2rem; }
+  .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; }
+  .top .logo img { margin-bottom: 0; }
+  .lang-switch { display: flex; gap: 0.5rem; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; }
+  .lang-switch a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .lang-switch a:hover { color: var(--text); }
+  .lang-switch .active { color: var(--text); }
+  .lang-switch .sep { color: var(--border); }
+  .actions { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+  .btn {
+    display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+    padding: 1rem 1.25rem; border-radius: 10px;
+    font-size: 16px; font-weight: 500; text-decoration: none;
+    border: 0.5px solid var(--border); color: var(--text);
+    background: var(--bg2); transition: border-color 0.2s, background 0.2s, opacity 0.2s;
+  }
+  .btn small { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 400; color: var(--muted); letter-spacing: 0.04em; }
+  .btn:hover { border-color: rgba(255,255,255,0.2); }
+  .btn.primary { background: var(--accent); color: #08090a; border-color: transparent; }
+  .btn.primary small { color: rgba(8,9,10,0.6); }
+  .btn.primary:hover { opacity: 0.9; }
+  .links { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-size: 14px; margin-bottom: 2.5rem; }
+  .links a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .links a:hover { color: var(--text); }
+  .contact { font-size: 13px; color: var(--muted); border-top: 0.5px solid var(--border); padding-top: 1.25rem; }
+  .contact a { color: var(--accent); text-decoration: none; }
+  @media (min-width: 480px) {
+    .actions { flex-direction: row; }
+    .btn { flex: 1; flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <a class="logo" href="../../"><img src="../../logo-white.png" alt="PIXION"></a>
+    <div class="lang-switch"><a href="../" hreflang="ko" lang="ko">KO</a><span class="sep">/</span><span class="active">EN</span></div>
+  </div>
+  <p class="eyebrow">Product Brochure</p>
+  <h1>AIoT Lighting Signage<br><em>Product Brochure</em></h1>
+  <p class="desc">An introduction to PIXION lighting signage: built on the lighting infrastructure you already have, it turns floors and walls into advertising media with no construction.</p>
+
+  <div class="actions">
+    <a class="btn primary" href="../pixion-lighting-signage-en.html">View in browser <small>HTML</small></a>
+    <a class="btn" href="../pixion-lighting-signage-en.pdf" download="PIXION Lighting Signage Brochure.pdf">Download PDF <small>0.6 MB</small></a>
+  </div>
+
+  <ul class="links">
+    <li><a href="../pixion-lighting-signage-en.pdf" target="_blank" rel="noopener">Open PDF in browser</a></li>
+    <li><a href="https://youtu.be/7_eA0BMfzZg" target="_blank" rel="noopener">Demo video</a></li>
+    <li><a href="../../">Homepage</a></li>
+  </ul>
+
+  <p class="contact">Pixion Inc. · <a href="mailto:representative@pixion.ai">representative@pixion.ai</a></p>
+</main>
+<script>
+  document.querySelectorAll('.lang-switch a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('lang', a.getAttribute('hreflang')); } catch (e) {}
+    });
+  });
+</script>
+</body>
+</html>

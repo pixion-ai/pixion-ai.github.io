@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=794">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<title>PIXION Lighting Signage Brochure</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap">
+<style>
+:root{
+  --blue:#F0356A; --blue-deep:#C92455; --navy:#3E2B55; --ink:#1A1A1A; --muted:#555B66; --faint:#8A8F99;
+  --line:#DCDEE3; --panel:#EFEFEF; --panel-2:#F7F7F7; --paper:#FFFFFF; --sky:#FBE3EA; --yellow:#F4C430; --charcoal:#1F1F1F; --orange:#F5B84A;
+}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:"Pretendard","Malgun Gothic",sans-serif;font-size:10.2pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;display:flex;flex-direction:column}
+.page:last-child{page-break-after:auto}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font-size:8.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.ybar{width:16mm;height:1.6mm;background:var(--yellow);margin:2mm 0 5mm}
+.pre{font-size:14pt;color:#333}
+.slogan{font-family:"Poppins","Pretendard",sans-serif;font-weight:500;font-size:11pt;color:#333;margin-top:4mm}
+
+/* ---------- page 1 ---------- */
+.p1-top{padding:12mm 14mm 0;display:flex;justify-content:space-between;align-items:center}
+.p1-top img{height:9mm}
+.p1-top .tag{font-size:8.5pt;color:var(--muted);letter-spacing:.06em}
+.hero{margin:16mm 14mm 0;display:grid;grid-template-columns:1fr 96mm;gap:7mm;align-items:center}
+.hero h1{font-size:24pt;line-height:1.25;font-weight:700;letter-spacing:-.01em;margin-top:1mm}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero .lead{margin-top:5mm;font-size:11pt;color:var(--muted);line-height:1.6;max-width:92mm}
+.photo{background:var(--panel);border-radius:5mm;display:flex;align-items:center;justify-content:center;padding:0;position:relative;overflow:hidden;aspect-ratio:1145/657;min-height:0}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .cap{position:absolute;left:4mm;bottom:3mm;font-size:7.5pt;color:#fff;background:rgba(0,0,0,.45);padding:.5mm 2mm;border-radius:1.5mm}
+.benefits{margin:0 14mm 0;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+.benefit{border-top:0;padding-top:0}
+.benefit::before{content:"";display:block;width:11mm;height:1.2mm;background:var(--yellow);margin-bottom:3mm}
+.benefit b{display:block;font-size:11pt;margin-bottom:1.5mm;white-space:nowrap}
+.benefit p{color:var(--muted);font-size:9.5pt}
+.steps{margin:9mm 14mm 0;background:var(--navy);color:#fff;border-radius:4mm;padding:6mm 7mm 6.5mm;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;position:relative}
+.steps .eyebrow{color:var(--yellow);grid-column:1/-1;margin-bottom:-2mm}
+.steps .eyebrow .num{color:#fff}
+.step{display:flex;gap:3mm;align-items:flex-start}
+.step .n{flex:none;width:5.5mm;height:5.5mm;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:8pt;margin-top:.8mm}
+.step b{display:block;font-size:11pt;margin-bottom:1mm}
+.step p{font-size:9pt;color:#D9D2E3;line-height:1.5}
+.uses{margin:0}
+.uses .eyebrow{margin-bottom:4mm}
+.use-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}
+.use{background:var(--panel-2);border:1px solid var(--line);border-radius:3mm;padding:5.5mm 5mm 6mm}
+.use b{display:block;font-size:10.5pt;margin-bottom:1mm}
+.use p{font-size:8.8pt;color:var(--muted);line-height:1.45}
+.foot{margin-top:auto;padding:0 14mm 10mm;display:flex;justify-content:space-between;align-items:flex-end;font-size:8.5pt;color:var(--faint)}
+.foot b{color:var(--muted);font-weight:500}
+
+/* ---------- page 2 ---------- */
+.p2-top{padding:12mm 14mm 0;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);margin:0 0 0;padding-bottom:4mm}
+.p2-top h2{font-size:17pt}
+.p2-top .tag{font-size:8.5pt;color:var(--muted)}
+.section{margin:7mm 14mm 0}
+.section h3{font-size:12.5pt;margin-bottom:5mm;display:flex;align-items:center;gap:3mm}
+.section h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.section h3::before,.sq{content:"";display:inline-block;flex:none;width:3.2mm;height:3.2mm;background:var(--blue)}
+.detail .hd{align-items:center}
+.steps .eyebrow{display:flex;align-items:center;gap:3mm}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm 6mm}
+.feat{display:grid;grid-template-columns:9mm 1fr;gap:2.5mm;align-items:start}
+.feat .ic{width:9mm;height:9mm;border-radius:2.5mm;background:var(--charcoal);display:flex;align-items:center;justify-content:center}
+.feat .ic svg{width:5.5mm;height:5.5mm;stroke:var(--orange);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.feat b{display:block;font-size:10.5pt;margin-bottom:.8mm}
+.feat p{font-size:9pt;color:var(--muted);line-height:1.45}
+.install{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm}
+.inst{border:1px solid var(--line);border-radius:4mm;padding:4.5mm 5mm;display:grid;grid-template-columns:38mm 1fr;gap:5mm;align-items:center;background:var(--panel-2)}
+.inst img{max-width:100%;max-height:38mm;justify-self:center;filter:drop-shadow(0 4px 8px rgba(14,18,48,.18))}
+.inst b{display:block;font-size:11pt;margin-bottom:1.5mm}
+.inst p{font-size:9pt;color:var(--muted);line-height:1.45}
+.inst .chip{display:inline-block;margin-top:2mm;font-size:8pt;font-weight:700;color:#fff;background:var(--navy);padding:.6mm 2.2mm;border-radius:2mm}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8mm}
+table.spec{width:100%;border-collapse:collapse;font-size:9.2pt}
+table.spec th,table.spec td{text-align:left;padding:1.7mm 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.spec th{width:30mm;color:var(--muted);font-weight:500}
+.road{list-style:none;margin:0;padding:0;display:grid;gap:2.6mm}
+.road li{display:grid;grid-template-columns:5mm 1fr;gap:2.5mm;font-size:9.2pt;align-items:start}
+.road li::before{content:"";width:4mm;height:1.2mm;background:var(--yellow);margin-top:2.3mm}
+.road li b{font-weight:700}
+.road li span{color:var(--muted)}
+.note{font-size:8.2pt;color:var(--faint);margin-top:2.5mm}
+.contact{margin:auto 14mm 9mm;background:var(--navy);color:#fff;border-radius:4mm;padding:4.5mm 8mm;display:flex;justify-content:space-between;align-items:center}
+.contact img{height:7mm}
+.contact .c{text-align:right;font-size:9.5pt;line-height:1.55}
+.contact .c b{font-size:11pt;display:block;margin-bottom:.5mm}
+.contact .c span{color:#D9D2E3}
+
+.why{margin:13mm 14mm 0}
+.why .eyebrow{margin-bottom:3.5mm}
+.detail{margin:9mm 14mm 0}
+.detail .hd{display:flex;align-items:baseline;gap:3mm;margin-bottom:3mm}
+.num{font-family:"Poppins","Pretendard",sans-serif;font-weight:700;font-size:9pt;letter-spacing:.1em;color:var(--blue)}
+.detail h3{font-size:12.5pt}
+.detail .sub{font-size:9.5pt;color:var(--muted);margin-left:2mm}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.trio .it{background:var(--panel-2);border:1px solid var(--line);border-radius:3mm;padding:3.8mm 4.5mm 4.2mm}
+.trio .it b{display:block;font-size:10.5pt;margin-bottom:1mm}
+.trio .it p{font-size:8.8pt;color:var(--muted);line-height:1.45}
+.section .eyebrow{margin-bottom:1.5mm}
+.section{margin:4mm 14mm 0}
+.use p{font-size:8.6pt;line-height:1.4}
+.inst p{line-height:1.4}
+.feat p{font-size:8.8pt}
+.note{margin-top:1.5mm}
+.section h3{margin-bottom:3mm}
+.section h3{margin-bottom:3.5mm}
+.inst img{max-height:20mm}
+.inst{grid-template-columns:1fr;gap:2.5mm;align-items:start}
+.inst .pic{height:20mm;display:flex;align-items:center;justify-content:center}
+.inst .pic.soon{border:1px dashed var(--line);border-radius:3mm;color:var(--faint);font-size:8.5pt}
+table.spec th{width:19mm;padding-right:2mm}
+table.spec{font-size:9pt}
+.feat p{line-height:1.4}
+.feat-grid{gap:3.5mm 6mm}
+.p2-top{padding-top:9mm;padding-bottom:3mm}
+.inst{padding:3mm 4.5mm 3.5mm}
+table.spec th,table.spec td{padding:1mm 0}
+.road{gap:2mm}
+.use{padding:4mm 4.5mm 4mm}
+.benefit p{font-size:9.2pt}
+.hero .lead{margin-top:4mm}
+
+.trio.dark .it{background:var(--navy);border-color:var(--navy);color:#fff}
+.trio.dark .it p{color:#D9D2E3}
+.trio.dark .n{display:inline-flex;align-items:center;justify-content:center;width:4.2mm;height:4.2mm;border-radius:50%;background:var(--blue);color:#fff;font-size:7pt;font-weight:700;margin-right:2mm;vertical-align:middle;position:relative;top:-.3mm}
+.section h3::after{display:none}
+.section:first-of-type{margin-top:14mm}
+.section{margin:7mm 14mm 0}
+.why{margin:16mm 14mm 0}
+.detail{margin:11mm 14mm 0}
+.inst .pic{height:22mm}
+.feat-grid{gap:4.5mm 6mm}
+.use p,.feat p{line-height:1.45}
+.h3note{margin-left:auto;font-size:8.2pt;color:var(--faint);font-weight:400}
+.feat{align-items:center}
+.inst .lbl{display:inline-block;font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:.7mm 2.6mm;border-radius:2mm;margin-bottom:1.8mm}
+.inst .soon-txt{font-size:8.2pt;color:var(--faint);margin-left:2mm}
+
+.hero-logo{height:7.5mm;display:block;margin-bottom:7mm}
+.timeline{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;padding-top:1mm}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:4.2mm;height:1px;background:var(--line)}
+.tl{position:relative;padding-top:10mm}
+.tl .n{position:absolute;top:1mm;left:0;width:6.5mm;height:6.5mm;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:8.5pt;display:flex;align-items:center;justify-content:center;font-family:"Poppins","Pretendard",sans-serif}
+.tl b{display:block;font-size:10.5pt;margin-bottom:1mm}
+.tl p{font-size:8.8pt;color:var(--muted);line-height:1.45}
+.navybox{background:var(--navy);color:#fff;border-radius:4mm;padding:5.5mm 6mm;display:grid;grid-template-columns:repeat(3,1fr)}
+.navybox .col{padding:0 5mm;border-left:1px solid rgba(255,255,255,.18)}
+.navybox .col:first-child{padding-left:0;border-left:0}
+.navybox .col:last-child{padding-right:0}
+.navybox b{display:block;font-size:10.5pt;color:var(--yellow);margin-bottom:1mm}
+.navybox p{font-size:8.8pt;color:#D9D2E3;line-height:1.45}
+.feat-list{display:grid;grid-template-columns:1fr 1fr;column-gap:10mm}
+.feat{grid-template-columns:8mm 1fr;gap:3.5mm;padding:2.6mm 0;border-bottom:1px solid var(--line)}
+.feat .ic{width:8mm;height:8mm;border-radius:50%}
+.feat .ic svg{width:4.6mm;height:4.6mm}
+.feat b{font-size:10pt;margin-bottom:.4mm}
+.feat p{font-size:8.8pt;line-height:1.4}
+.two{align-items:stretch}
+.two>div{display:flex;flex-direction:column}
+table.spec{flex:1}
+.road{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+
+.why + .detail{margin-top:17mm}
+
+.hero-logo{height:11mm;margin-bottom:8mm}
+.hero h1{font-size:18pt;white-space:nowrap;letter-spacing:-.02em}
+
+.hero .lead{font-size:9pt;margin-top:3.5mm}
+
+.demo{display:grid;grid-template-columns:1fr 22mm;gap:4mm;text-decoration:none;color:inherit;align-items:center}
+.thumb{position:relative;border-radius:3mm;overflow:hidden;aspect-ratio:16/9;background:#000}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.play{position:absolute;right:2.5mm;bottom:2.5mm;width:8mm;height:8mm;border-radius:50%;background:rgba(240,53,106,.92)}
+.play::after{content:"";position:absolute;left:3.1mm;top:2.2mm;border-left:3mm solid #fff;border-top:1.8mm solid transparent;border-bottom:1.8mm solid transparent}
+.qrbox{display:flex;flex-direction:column;align-items:center;gap:1.5mm}
+.qrbox img{width:22mm;height:22mm;image-rendering:pixelated}
+.qrbox span{font-size:6.2pt;color:var(--muted);white-space:nowrap;letter-spacing:.01em}
+.demo-cap{font-size:8.2pt;color:var(--faint);margin-top:2.5mm}
+.roadline{display:flex;align-items:center;flex-wrap:wrap;gap:0 2.5mm;font-size:8.8pt;color:var(--muted);margin-top:7mm}
+.roadline::before{content:"";width:4mm;height:1.2mm;background:var(--yellow);margin-right:.5mm}
+.roadline .lbl2{font-weight:700;color:var(--ink);margin-right:1.5mm}
+.roadline i{font-style:normal;color:var(--faint)}
+
+.hero h1{font-size:18pt}
+.hero .lead{max-width:none}
+.trio .it .fn{font-size:7.6pt;color:var(--faint);margin-top:1.5mm}
+
+.hero{align-items:stretch}
+.photo{aspect-ratio:auto;height:auto;align-self:stretch}
+.photo img{object-position:50% 55%}
+.hero-logo{margin-top:.5mm}
+
+.h3note{margin-left:2mm}
+
+.section h3{align-items:baseline}
+.section h3::before{align-self:center}
+
+/* ---------- English edition overrides ---------- */
+.benefit b{white-space:nowrap}
+.hero h1{white-space:nowrap}
+.hero .lead{font-size:9.2pt;max-width:90mm}
+table.spec th{width:24mm}
+.detail .hd h3{white-space:nowrap}
+.detail .sub{font-size:9pt}
+.navybox p,.trio .it p,.tl p{font-size:8.5pt}
+.navybox b{white-space:nowrap}
+.contact .c{font-size:9pt}
+.why{margin-top:12mm}
+.why + .detail{margin-top:12mm}
+.detail{margin-top:8mm}
+.section{margin-top:4.5mm}
+.section:first-of-type{margin-top:10mm}
+.use b{white-space:nowrap}
+.inst .soon-txt{display:block;margin:0 0 1.5mm}
+.inst .pic{height:18mm}
+.inst img{max-height:18mm}
+.feat{padding:2.2mm 0}
+.h3note{white-space:nowrap}
+.roadline{margin-top:5mm;margin-bottom:3mm;flex-wrap:nowrap;white-space:nowrap;font-size:8.2pt;gap:0 2mm}
+.roadline::before{flex:none}
+.inst .pic{height:16mm}
+.inst img{max-height:16mm}
+.contact{margin-bottom:8mm}
+table.spec td{white-space:nowrap}
+@media screen{body{background:#e9e9ec;padding:12px 0}.page{margin:0 auto;box-shadow:0 2px 14px rgba(0,0,0,.14)}.page+.page{margin-top:12px}}
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 ============ -->
+<section class="page">
+  <div class="hero">
+    <div>
+      <img class="hero-logo" src="img/logo_black.png" alt="PIXION">
+      <div class="pre">Turning space into media,</div>
+      <h1>AIoT Lighting Signage</h1>
+      <p class="lead">Built on the lighting infrastructure you already have, it turns floors and walls into advertising media without touching the interior.</p>
+    </div>
+    <div class="photo">
+      <img src="img/hero_effect2.jpg" alt="Content projected onto a store floor">
+    </div>
+  </div>
+
+  <div class="why">
+    <div class="benefits">
+      <div class="benefit"><b>Unmissable visibility</b><p>Moving graphics at over 1,000 lux on the floors and walls where customers are already looking.</p></div>
+      <div class="benefit"><b>Clip on, run from an app</b><p>Clip it onto a lighting track and installation is done. Head office updates every store at once from the app.</p></div>
+      <div class="benefit"><b>Install once, stay fresh</b><p>No more reprinting. Swap the content, not the hardware, and take the device along when the store moves.</p></div>
+    </div>
+  </div>
+
+  <div class="detail">
+    <div class="hd"><span class="sq"></span><h3>At their feet, not at eye level</h3><span class="sub">Three things combine to stop people mid-stride.</span></div>
+    <div class="trio">
+      <div class="it"><b>Impossible to ignore</b><p>Light on the walking path cannot be avoided. Entrances, checkouts, queues: wherever people stand becomes the ad surface.</p></div>
+      <div class="it"><b>Crisp at 1,000 lux</b><p>Clearly legible in most indoor stores without direct sunlight.</p><p class="fn">※ At a projection distance of 2.5 m</p></div>
+      <div class="it"><b>Motion graphics</b><p>Unlike static print, motion holds the eye, then guides the customer where you want them to go.</p></div>
+    </div>
+  </div>
+
+  <div class="detail">
+    <div class="hd"><span class="sq"></span><h3>From installation to operation in three steps</h3></div>
+    <div class="timeline">
+      <div class="tl"><div class="n">1</div><b>Install</b><p>Clip it onto a lighting track or fix it with a bracket, then connect the power.</p></div>
+      <div class="tl"><div class="n">2</div><b>Register in the app</b><p>The smartphone app finds the device and connects it to the store Wi-Fi. This step can be delegated to an installer.</p></div>
+      <div class="tl"><div class="n">3</div><b>Upload content</b><p>Set when each video or image should appear and push it to the devices.</p></div>
+    </div>
+  </div>
+
+  <div class="detail">
+    <div class="hd"><span class="sq"></span><h3>Don't reprint it.</h3><span class="sub">Not just a device that plays video, but a system that takes the hassle out of running stores.</span></div>
+    <div class="navybox">
+      <div class="col"><b>Zero cost, zero waste</b><p>No printing, shipping or staff to swap posters, banners and POP, and nothing to throw away when the campaign ends.</p></div>
+      <div class="col"><b>Every store, one place</b><p>No per-store print runs. Swap content across all stores at once for events and seasons, centrally and without a site visit.</p></div>
+      <div class="col"><b>Reuse anywhere</b><p>Change content every season or event. If the store moves or the layout changes, unclip the device and use it again as is.</p></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div><b>PIXION Inc.</b> · www.pixion.ai · representative@pixion.ai</div>
+    <div>1 / 2</div>
+  </div>
+</section>
+
+<!-- ============ PAGE 2 ============ -->
+<section class="page">
+  <div class="section">
+    <h3>Where it works</h3>
+    <div class="uses">
+    <div class="use-grid">
+      <div class="use"><b>Retail</b><p>Guides foot traffic from the entrance and replaces POP displays</p></div>
+      <div class="use"><b>Exhibitions</b><p>Replaces every piece of print made for a short event and discarded afterwards</p></div>
+      <div class="use"><b>Hospitality</b><p>Spatial staging and branding for museums, galleries, hotels, resorts and pop-up stores</p></div>
+      <div class="use"><b>Public &amp; transit</b><p>Wayfinding in public buildings, stations and airports, and dynamic evacuation guidance in emergencies</p></div>
+    </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Key features</h3>
+    <div class="feat-list">
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><div><b>Remote management</b><p>Manage the devices in every store from one screen and run them together.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="8" r="4"/></svg></div><div><b>Presence detection</b><p>Turns the display on only when someone is there, saving energy.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>Content scheduling</b><p>Content changes automatically at the times you set.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><b>Operations report</b><p>A daily email reports uptime and any faults.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.9-9.9A6 6 0 0 1 17.6 9 4 4 0 0 1 17 18H7z"/><path d="M9 14l2 2 4-4"/></svg></div><div><b>Uninterrupted playback</b><p>If the internet drops for a while, playback continues from stored content.</p></div></div>
+      <div class="feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5"/><path d="M18 3v4h-4"/><path d="M20 12a8 8 0 0 1-14 5"/><path d="M6 21v-4h4"/></svg></div><div><b>Automatic updates</b><p>Improvements are delivered remotely, so no site visit is needed.</p></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Installation options</h3>
+    <div class="install">
+      <div class="inst"><div class="pic"><img src="img/rail_b.png" alt="Track-mounted"></div><div><span class="lbl">Track-mounted</span><p>Clips straight onto the lighting track found in most stores. Powered from the track, with no extra wiring.</p></div></div>
+      <div class="inst"><div class="pic"><img src="img/single_front.png" alt="Stand-alone"></div><div><span class="lbl">Stand-alone</span><p>Where there is no track, mount it on a ceiling or wall with a bracket or a 1/4" tripod mount. Powered by an adapter.</p></div></div>
+      <div class="inst"><div class="pic soon">Image coming soon</div><div><span class="lbl">Shelf-mounted</span><span class="soon-txt">Expected late 2027</span><p>A very small unit under a display shelf projects onto the floor in front of it, right at the point of purchase.</p></div></div>
+    </div>
+  </div>
+
+  <div class="section two">
+    <div>
+      <h3>Specifications<span class="h3note">※ May change in mass production.</span></h3>
+      <table class="spec">
+        <tr><th>Environment</th><td>Indoor, throw up to 3 m (2.5 m optimal)</td></tr>
+        <tr><th>Track</th><td>Standard 220 V single-circuit track</td></tr>
+        <tr><th>Power</th><td>Track power or DC 24 V adapter</td></tr>
+        <tr><th>Content</th><td>Video and image files, auto-converted</td></tr>
+        <tr><th>Connectivity</th><td>Wi-Fi; Bluetooth for initial setup</td></tr>
+        <tr><th>Operation</th><td>Multiple devices from the PIXION app</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Live demo video</h3>
+      <a class="demo" href="https://youtu.be/7_eA0BMfzZg">
+        <div class="thumb"><img src="img/demo_thumb.jpg" alt="Prototype demo video"><div class="play"></div></div>
+        <div class="qrbox"><img src="img/demo_qr.png" alt="QR"></div>
+      </a>
+      <p class="demo-cap">Wall-projection prototype · Scan the QR or click the image</p>
+    </div>
+  </div>
+
+  <div class="section roadline">
+    <span class="lbl2">Coming next</span>
+    <span>WYSIWYG authoring</span><i>·</i><span>Service API</span><i>·</i><span>AI customization</span><i>·</i><span>Multi-device scenarios</span><i>·</i><span>Open platform</span><i>·</i><span>Data reports</span>
+  </div>
+
+  <div class="contact">
+    <img src="img/logo_white.png" alt="PIXION">
+    <div class="c"><b>PIXION Inc.</b><span>B204-202, 111 Magokjungang-ro, Gangseo-gu, Seoul, Korea<br>www.pixion.ai · representative@pixion.ai</span></div>
+  </div>
+</section>
+
+</body>
+</html>
