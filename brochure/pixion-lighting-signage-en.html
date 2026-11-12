@@ -230,6 +230,49 @@ table.spec th{width:24mm}
 .inst img{max-height:16mm}
 .contact{margin-bottom:8mm}
 table.spec td{white-space:nowrap}
+
+/* ---------- v20 lineup ---------- */
+.install{grid-template-columns:1.32fr 1fr 1fr}
+.inst .pic{height:22mm}
+.inst .pic.duo{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+.inst .pic.duo figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:1mm}
+.inst .pic.duo img{max-height:17.5mm}
+.inst .pic.duo figcaption{font-size:7.6pt;color:var(--faint)}
+.inst .pic.shot{position:relative;border-radius:2.5mm;overflow:hidden;background:#000}
+.inst .pic.shot img{width:100%;height:100%;max-height:none;object-fit:cover;filter:none;display:block}
+.inst .pic.shot img.trace{object-position:50% 88%}
+.inst .pic.shot img.dot{object-position:50% 78%}
+.inst .pic.shot .tagc{position:absolute;left:1.5mm;bottom:1.5mm;font-size:6.8pt;color:#fff;background:rgba(0,0,0,.5);padding:.3mm 1.6mm;border-radius:1.2mm}
+.inst .pic.shot .due{position:absolute;right:1.5mm;top:1.5mm;font-size:6.8pt;font-weight:700;color:var(--navy);background:rgba(255,255,255,.92);padding:.3mm 1.8mm;border-radius:3mm}
+.pname{font-family:"Poppins","Pretendard",sans-serif;font-weight:700;font-size:11.5pt;color:var(--navy);line-height:1.25}
+.pname em{font-style:normal;color:var(--blue)}
+.ptype{font-size:8.8pt;font-weight:700;color:var(--ink);margin:.4mm 0 1.4mm}
+.roadline{margin-top:5mm}
+.section h3{white-space:nowrap}
+.inst .pic{height:19mm}
+.inst .pic.duo img{max-height:15mm}
+.inst p{font-size:8.6pt}
+
+/* ---------- v21: two-product lineup, portrait demo video ---------- */
+.install.v21{grid-template-columns:1fr 1fr}
+.install.v21 .pic.duo{height:22mm}
+.install.v21 .pic.duo img{max-height:17.5mm}
+.inst.row{grid-template-columns:38mm 1fr;gap:5mm;align-items:center}
+.inst.row .pic.shot{height:38mm}
+.inst.row .pic.shot img.trace{object-position:50% 50%}
+.dueline{display:inline-block;font-size:7.4pt;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--line);padding:.2mm 2.2mm;border-radius:3mm;margin-bottom:1.6mm}
+.demo.v{grid-template-columns:29mm 1fr;gap:6mm;align-items:center}
+.demo.v .thumb{aspect-ratio:9/16}
+.demo.v .side{display:flex;flex-direction:column;align-items:flex-start;gap:3mm}
+.demo.v .qrbox img{width:24mm;height:24mm}
+.demo.v .demo-cap{margin:0;font-size:8.6pt;color:var(--muted);line-height:1.5}
+.demo.v .demo-cap b{display:block;color:var(--ink);font-size:9.6pt}
+.section{margin-top:6mm}
+.feat{padding:2.2mm 0}
+.install.v21 .pic.duo{height:19mm}
+.install.v21 .pic.duo img{max-height:15mm}
+.demo.v{grid-template-columns:25mm 1fr}
+.section{margin-top:4.5mm}
 @media screen{body{background:#e9e9ec;padding:12px 0}.page{margin:0 auto;box-shadow:0 2px 14px rgba(0,0,0,.14)}.page+.page{margin-top:12px}}
 </style>
 </head>
@@ -242,7 +285,7 @@ table.spec td{white-space:nowrap}
       <img class="hero-logo" src="img/logo_black.png" alt="PIXION">
       <div class="pre">Turning space into media,</div>
       <h1>AIoT Lighting Signage</h1>
-      <p class="lead">Built on the lighting infrastructure you already have, it turns floors and walls into advertising media without touching the interior.</p>
+      <p class="lead">The fixture stays where it is; only the light becomes content. Floors and walls turn into advertising media without taking up any space.</p>
     </div>
     <div class="photo">
       <img src="img/hero_effect2.jpg" alt="Content projected onto a store floor">
@@ -261,7 +304,7 @@ table.spec td{white-space:nowrap}
     <div class="hd"><span class="sq"></span><h3>At their feet, not at eye level</h3><span class="sub">Three things combine to stop people mid-stride.</span></div>
     <div class="trio">
       <div class="it"><b>Impossible to ignore</b><p>Light on the walking path cannot be avoided. Entrances, checkouts, queues: wherever people stand becomes the ad surface.</p></div>
-      <div class="it"><b>Crisp at 1,000 lux</b><p>Clearly legible in most indoor stores without direct sunlight.</p><p class="fn">※ At a projection distance of 2.5 m</p></div>
+      <div class="it"><b>Crisp at 1,000 lux</b><p>Clearly legible in most indoor stores without direct sunlight.</p><p class="fn">※ At a projection distance of 3 m</p></div>
       <div class="it"><b>Motion graphics</b><p>Unlike static print, motion holds the eye, then guides the customer where you want them to go.</p></div>
     </div>
   </div>
@@ -317,44 +360,47 @@ table.spec td{white-space:nowrap}
   </div>
 
   <div class="section">
-    <h3>Installation options</h3>
-    <div class="install">
-      <div class="inst"><div class="pic"><img src="img/rail_b.png" alt="Track-mounted"></div><div><span class="lbl">Track-mounted</span><p>Clips straight onto the lighting track found in most stores. Powered from the track, with no extra wiring.</p></div></div>
-      <div class="inst"><div class="pic"><img src="img/single_front.png" alt="Stand-alone"></div><div><span class="lbl">Stand-alone</span><p>Where there is no track, mount it on a ceiling or wall with a bracket or a 1/4" tripod mount. Powered by an adapter.</p></div></div>
-      <div class="inst"><div class="pic soon">Image coming soon</div><div><span class="lbl">Shelf-mounted</span><span class="soon-txt">Expected late 2027</span><p>A very small unit under a display shelf projects onto the floor in front of it, right at the point of purchase.</p></div></div>
+    <h3>Product lineup<span class="h3note">All products share one platform and app.</span></h3>
+    <div class="install v21">
+      <div class="inst">
+        <div class="pic duo">
+          <figure><img src="img/rail_b.png" alt="PIXION Spot"><figcaption>Track mount</figcaption></figure>
+          <figure><img src="img/single_front.png" alt="PIXION Spot"><figcaption>Bracket mount</figcaption></figure>
+        </div>
+        <div><div class="pname">PIXION <em>Spot</em></div><div class="ptype">Standard · Fixed projection</div><p>Clips onto a lighting track and takes its power there. Where there is no track, use a bracket or 1/4" tripod mount with an adapter.</p></div>
+      </div>
+      <div class="inst row">
+        <div class="pic shot"><img class="trace" src="img/trace_proto.jpg" alt="PIXION Trace"><span class="tagc">Prototype</span></div>
+        <div><span class="dueline">Expected 2028</span><div class="pname">PIXION <em>Trace</em></div><div class="ptype">AI · Pedestrian tracking</div><p>Camera and AI detect people, and the light follows their steps. Characters react to how they move.</p></div>
+      </div>
     </div>
   </div>
 
   <div class="section two">
     <div>
-      <h3>Specifications<span class="h3note">※ May change in mass production.</span></h3>
+      <h3>Specifications<span class="h3note">※ PIXION Spot · Subject to change</span></h3>
       <table class="spec">
+        <tr><th>Unit</th><td>Ø90 × 170 mm · laser (LD) · 24/7 operation</td></tr>
         <tr><th>Environment</th><td>Indoor, throw up to 3 m (2.5 m optimal)</td></tr>
-        <tr><th>Track</th><td>Standard 220 V single-circuit track</td></tr>
-        <tr><th>Power</th><td>Track power or DC 24 V adapter</td></tr>
+        <tr><th>Power</th><td>220 V 1-circuit track or DC 24 V adapter</td></tr>
         <tr><th>Content</th><td>Video and image files, auto-converted</td></tr>
+        <tr><th>Authoring</th><td>Dedicated motion graphics tool included</td></tr>
         <tr><th>Connectivity</th><td>Wi-Fi; Bluetooth for initial setup</td></tr>
         <tr><th>Operation</th><td>Multiple devices from the PIXION app</td></tr>
       </table>
     </div>
     <div>
       <h3>Live demo video</h3>
-      <a class="demo" href="https://youtu.be/7_eA0BMfzZg">
-        <div class="thumb"><img src="img/demo_thumb.jpg" alt="Prototype demo video"><div class="play"></div></div>
-        <div class="qrbox"><img src="img/demo_qr.png" alt="QR"></div>
+      <a class="demo v" href="https://youtube.com/shorts/4Q4epMrY8oU">
+        <div class="thumb"><img src="img/ifs_thumb.jpg" alt="PIXION booth at IFS 2026"><div class="play"></div></div>
+        <div class="side"><div class="qrbox"><img src="img/ifs_qr.png" alt="QR"></div><p class="demo-cap"><b>PIXION booth at IFS 2026</b>Scan the QR or click the image</p></div>
       </a>
-      <p class="demo-cap">Wall-projection prototype · Scan the QR or click the image</p>
     </div>
-  </div>
-
-  <div class="section roadline">
-    <span class="lbl2">Coming next</span>
-    <span>WYSIWYG authoring</span><i>·</i><span>Service API</span><i>·</i><span>AI customization</span><i>·</i><span>Multi-device scenarios</span><i>·</i><span>Open platform</span><i>·</i><span>Data reports</span>
   </div>
 
   <div class="contact">
     <img src="img/logo_white.png" alt="PIXION">
-    <div class="c"><b>PIXION Inc.</b><span>B204-202, 111 Magokjungang-ro, Gangseo-gu, Seoul, Korea<br>www.pixion.ai · representative@pixion.ai</span></div>
+    <div class="c"><b>PIXION Inc.</b><span>B204-202, Bldg. 101, 111 Magokjungang-ro, Gangseo-gu, Seoul, Korea<br>www.pixion.ai · representative@pixion.ai</span></div>
   </div>
 </section>
 

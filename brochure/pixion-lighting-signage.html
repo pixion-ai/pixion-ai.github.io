@@ -202,6 +202,42 @@ table.spec{flex:1}
 
 .section h3{align-items:baseline}
 .section h3::before{align-self:center}
+
+/* ---------- v20 lineup ---------- */
+.install{grid-template-columns:1.32fr 1fr 1fr}
+.inst .pic{height:22mm}
+.inst .pic.duo{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+.inst .pic.duo figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:1mm}
+.inst .pic.duo img{max-height:17.5mm}
+.inst .pic.duo figcaption{font-size:7.6pt;color:var(--faint)}
+.inst .pic.shot{position:relative;border-radius:2.5mm;overflow:hidden;background:#000}
+.inst .pic.shot img{width:100%;height:100%;max-height:none;object-fit:cover;filter:none;display:block}
+.inst .pic.shot img.trace{object-position:50% 88%}
+.inst .pic.shot img.dot{object-position:50% 78%}
+.inst .pic.shot .tagc{position:absolute;left:1.5mm;bottom:1.5mm;font-size:6.8pt;color:#fff;background:rgba(0,0,0,.5);padding:.3mm 1.6mm;border-radius:1.2mm}
+.inst .pic.shot .due{position:absolute;right:1.5mm;top:1.5mm;font-size:6.8pt;font-weight:700;color:var(--navy);background:rgba(255,255,255,.92);padding:.3mm 1.8mm;border-radius:3mm}
+.pname{font-family:"Poppins","Pretendard",sans-serif;font-weight:700;font-size:11.5pt;color:var(--navy);line-height:1.25}
+.pname em{font-style:normal;color:var(--blue)}
+.ptype{font-size:8.8pt;font-weight:700;color:var(--ink);margin:.4mm 0 1.4mm}
+.roadline{margin-top:5mm}
+.section h3{white-space:nowrap}
+
+/* ---------- v21: two-product lineup, portrait demo video ---------- */
+.install.v21{grid-template-columns:1fr 1fr}
+.install.v21 .pic.duo{height:22mm}
+.install.v21 .pic.duo img{max-height:17.5mm}
+.inst.row{grid-template-columns:38mm 1fr;gap:5mm;align-items:center}
+.inst.row .pic.shot{height:38mm}
+.inst.row .pic.shot img.trace{object-position:50% 50%}
+.dueline{display:inline-block;font-size:7.4pt;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--line);padding:.2mm 2.2mm;border-radius:3mm;margin-bottom:1.6mm}
+.demo.v{grid-template-columns:29mm 1fr;gap:6mm;align-items:center}
+.demo.v .thumb{aspect-ratio:9/16}
+.demo.v .side{display:flex;flex-direction:column;align-items:flex-start;gap:3mm}
+.demo.v .qrbox img{width:24mm;height:24mm}
+.demo.v .demo-cap{margin:0;font-size:8.6pt;color:var(--muted);line-height:1.5}
+.demo.v .demo-cap b{display:block;color:var(--ink);font-size:9.6pt}
+.section{margin-top:6mm}
+.feat{padding:2.2mm 0}
 @media screen{body{background:#e9e9ec;padding:12px 0}.page{margin:0 auto;box-shadow:0 2px 14px rgba(0,0,0,.14)}.page+.page{margin-top:12px}}
 </style>
 </head>
@@ -214,7 +250,7 @@ table.spec{flex:1}
       <img class="hero-logo" src="img/logo_black.png" alt="PIXION">
       <div class="pre">공간을 미디어로 바꾸는,</div>
       <h1>AIoT 조명형 사이니지</h1>
-      <p class="lead">기존 조명 인프라를 활용해 인테리어를 해치지 않고<br>바닥과 벽을 광고·홍보 매체로 바꿉니다.</p>
+      <p class="lead">조명 자리는 그대로, 비추는 빛만 콘텐츠로 바꿉니다.<br>공간을 차지하지 않고 바닥과 벽이 광고·홍보 매체가 됩니다.</p>
     </div>
     <div class="photo">
       <img src="img/hero_effect2.jpg" alt="매장 바닥에 투사된 콘텐츠">
@@ -233,7 +269,7 @@ table.spec{flex:1}
     <div class="hd"><span class="sq"></span><h3>눈높이가 아니라 발 밑에서</h3><span class="sub">세 가지가 겹쳐 지나가던 걸음을 멈추게 합니다.</span></div>
     <div class="trio">
       <div class="it"><b>피할 수 없는 시선</b><p>동선 위의 빛은 피할 수 없습니다. 입구·계산대·대기 줄, 사람이 서 있는 자리가 그대로 광고 면이 됩니다.</p></div>
-      <div class="it"><b>1,000 lux의 또렷한 시인성</b><p>직사광선이 없는 대부분의 실내 매장에서 또렷하게 식별할 수 있습니다.</p><p class="fn">※ 투사 거리 2.5m 기준</p></div>
+      <div class="it"><b>1,000 lux의 또렷한 시인성</b><p>직사광선이 없는 대부분의 실내 매장에서 또렷하게 식별할 수 있습니다.</p><p class="fn">※ 투사 거리 3m 기준</p></div>
       <div class="it"><b>모션 그래픽</b><p>정지된 인쇄물과 달리 모션은 시선을 붙잡습니다. 시선을 끈 뒤 원하는 방향으로 고객을 이끕니다.</p></div>
     </div>
   </div>
@@ -289,44 +325,47 @@ table.spec{flex:1}
   </div>
 
   <div class="section">
-    <h3>설치 방식</h3>
-    <div class="install">
-      <div class="inst"><div class="pic"><img src="img/rail_b.png" alt="레일형"></div><div><span class="lbl">레일형</span><p>매장에 흔한 조명 레일(트랙)에 그대로 끼웁니다. 전원도 레일에서 받아 별도 배선이 없습니다.</p></div></div>
-      <div class="inst"><div class="pic"><img src="img/single_front.png" alt="개별 설치형"></div><div><span class="lbl">개별 설치형</span><p>레일이 없는 곳은 브래킷이나 삼각대 규격(1/4") 마운트로 천장·벽에 답니다. 어댑터로 전원을 연결합니다.</p></div></div>
-      <div class="inst"><div class="pic soon">이미지 준비 중</div><div><span class="lbl">선반형</span><span class="soon-txt">2027년 말 출시 예정</span><p>진열 선반 아래에 아주 작게 달아 선반 앞 바닥에 비춥니다. 구매 시점의 고객에게 직접 보여 줍니다.</p></div></div>
+    <h3>제품 라인업<span class="h3note">플랫폼과 앱은 모든 제품이 함께 씁니다.</span></h3>
+    <div class="install v21">
+      <div class="inst">
+        <div class="pic duo">
+          <figure><img src="img/rail_b.png" alt="PIXION Spot"><figcaption>레일 장착</figcaption></figure>
+          <figure><img src="img/single_front.png" alt="PIXION Spot"><figcaption>브래킷 장착</figcaption></figure>
+        </div>
+        <div><div class="pname">PIXION <em>Spot</em></div><div class="ptype">기본형 · 고정 투사</div><p>조명 레일(트랙)에 끼우면 전원도 레일에서 받습니다. 레일이 없는 곳은 브래킷이나 삼각대 규격(1/4") 마운트로 달고 어댑터를 연결합니다.</p></div>
+      </div>
+      <div class="inst row">
+        <div class="pic shot"><img class="trace" src="img/trace_proto.jpg" alt="PIXION Trace"><span class="tagc">시제품</span></div>
+        <div><span class="dueline">2028년 출시 예정</span><div class="pname">PIXION <em>Trace</em></div><div class="ptype">AI 확장 · 보행자 추종</div><p>카메라와 AI가 사람을 감지하고, 빛이 걸음을 따라가며 비춥니다. 캐릭터가 사람의 움직임에 반응합니다.</p></div>
+      </div>
     </div>
   </div>
 
   <div class="section two">
     <div>
-      <h3>주요 사양<span class="h3note">※ 사양은 양산 과정에서 달라질 수 있습니다.</span></h3>
+      <h3>주요 사양<span class="h3note">※ PIXION Spot 기준 · 양산 시 변경 가능</span></h3>
       <table class="spec">
+        <tr><th>본체</th><td>Ø90 × 170mm, 레이저(LD) 광원, 24시간 상시 구동</td></tr>
         <tr><th>설치 환경</th><td>실내 최대 3m 이내의 투사 거리 권장 (최적 2.5m)</td></tr>
-        <tr><th>레일 규격</th><td>국내 표준 220V 1회로 조명 레일 호환</td></tr>
-        <tr><th>전원</th><td>레일 전원 또는 DC 24V 어댑터</td></tr>
+        <tr><th>전원</th><td>220V 1회로 레일(국내 표준) 또는 DC 24V 어댑터</td></tr>
         <tr><th>콘텐츠</th><td>영상·이미지 파일, 서버에서 자동 변환</td></tr>
+        <tr><th>콘텐츠 제작</th><td>전용 모션 그래픽 제작툴 제공</td></tr>
         <tr><th>연결</th><td>Wi-Fi, 블루투스(초기 설정)</td></tr>
         <tr><th>운영</th><td>픽시온 사이니지 전용앱에서 다수 기기 운영</td></tr>
       </table>
     </div>
     <div>
       <h3>실제 시연 영상</h3>
-      <a class="demo" href="https://youtu.be/7_eA0BMfzZg">
-        <div class="thumb"><img src="img/demo_thumb.jpg" alt="프로토타입 시연 영상"><div class="play"></div></div>
-        <div class="qrbox"><img src="img/demo_qr.png" alt="QR"></div>
+      <a class="demo v" href="https://youtube.com/shorts/4Q4epMrY8oU">
+        <div class="thumb"><img src="img/ifs_thumb.jpg" alt="IFS 2026 픽시온 부스 현장 영상"><div class="play"></div></div>
+        <div class="side"><div class="qrbox"><img src="img/ifs_qr.png" alt="QR"></div><p class="demo-cap"><b>IFS 2026 픽시온 부스 현장</b>QR을 찍거나 이미지를 클릭</p></div>
       </a>
-      <p class="demo-cap">벽면 투사 프로토타입 시연 · QR을 찍거나 이미지를 클릭</p>
     </div>
-  </div>
-
-  <div class="section roadline">
-    <span class="lbl2">확장 예정</span>
-    <span>WYSIWYG 제작 툴</span><i>·</i><span>대규모 서비스 API</span><i>·</i><span>AI 커스터마이징</span><i>·</i><span>복수 기기 연동 시나리오</span><i>·</i><span>개방형 플랫폼</span><i>·</i><span>데이터 리포트</span>
   </div>
 
   <div class="contact">
     <img src="img/logo_white.png" alt="PIXION">
-    <div class="c"><b>주식회사 픽시온</b><span>서울 강서구 마곡중앙로 111, B204-202호<br>www.pixion.ai · representative@pixion.ai</span></div>
+    <div class="c"><b>주식회사 픽시온</b><span>서울 강서구 마곡중앙로 111, 101동 B204-202호<br>www.pixion.ai · representative@pixion.ai</span></div>
   </div>
 </section>
 
